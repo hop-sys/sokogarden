@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -34,13 +35,28 @@ class Signin : AppCompatActivity() {
         }
 //        onClick of the button signin we need to interact with our API endpoint
         signinButton.setOnClickListener {
+            val mail = email.text.toString().trim()
+            val pass = password.text.toString().trim()
+
+//            Validation: check if fields are empty
+            if (mail.isEmpty()) {
+                email.error = "Please enter email"
+                Toast.makeText(applicationContext, "Email is required", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (pass.isEmpty()) {
+                password.error = "Please enter password"
+                Toast.makeText(applicationContext, "Password is required", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
 //            specify the url of the API endpoint
             val  api = "https://hope.alwaysdata.net/api/signin"
 //            create a request that will enable you to hold the data in form of a bundle/package
             val data = RequestParams()
 //            add/append the email and password
-            data.put("email", email.text.toString())
-            data.put("password", password.text.toString())
+            data.put("email", mail)
+            data.put("password", pass)
 
 //            import API helper
             val helper = ApiHelper(applicationContext)
