@@ -36,8 +36,8 @@
             android:padding="10dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="8dp"
-            android:textColor="#456"
-            android:backgroundTint="#789"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4890D9"
             android:id="@+id/signupBtn"/>
 
         <Button
@@ -48,10 +48,23 @@
             android:padding="10dp"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="8dp"
-            android:textColor="#456"
-            android:backgroundTint="#789"
+            android:textColor="#FFF"
+            android:backgroundTint="#4890D9"
             android:id="@+id/signinBtn"/>
 
     </LinearLayout>
+
+<!--    below is our progressbar-->
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"/>
+
+<!--    below is our recyclerView-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        tools:listitem="@layout/single_item"/>
 
 </LinearLayout>
