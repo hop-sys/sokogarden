@@ -70,6 +70,16 @@
                 android:textColor="#B8961E"
                 android:fontFamily="sans-serif"/>
 
+<!--            below is an EditText for product_description-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDescription"
+                android:text="Product Description"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#000"/>
+
 <!--            below is an editText for entering mobile number-->
             <EditText
                 android:layout_width="match_parent"
@@ -82,7 +92,8 @@
                 android:layout_marginTop="8dp"
                 android:backgroundTint="#EAD9B6"/>
 
-<!--                Below is a button to complete payment action-->
+
+            <!--                Below is a button to complete payment action-->
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

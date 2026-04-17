@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#7394B4"
+    android:background="#D4AF37"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -27,17 +27,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-<!--        this button-->
+<!--        this is the button-->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="👤Sign up"
             android:textSize="25sp"
             android:padding="10dp"
-            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="8dp"
             android:textColor="#FFFFFF"
-            android:backgroundTint="#4890D9"
+            android:backgroundTint="#000"
             android:id="@+id/signupBtn"/>
 
         <Button
@@ -46,11 +47,25 @@
             android:text="👮Signin"
             android:textSize="25sp"
             android:padding="10dp"
-            android:layout_marginLeft="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="8dp"
             android:textColor="#FFF"
-            android:backgroundTint="#4890D9"
+            android:backgroundTint="#000"
             android:id="@+id/signinBtn"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📜About"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFF"
+            android:backgroundTint="#000"
+            android:id="@+id/aboutBtn"/>
 
     </LinearLayout>
 
